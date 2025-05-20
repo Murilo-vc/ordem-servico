@@ -9,18 +9,6 @@ public final class StringUtils {
         return string == null || string.isBlank();
     }
 
-    public static boolean isNumeric(String strNum) {
-        if (strNum == null) {
-            return false;
-        }
-        try {
-            Integer.parseInt(strNum);
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-        return true;
-    }
-
     public static boolean containsSpecialCharacter(final String string) {
         Pattern p = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
         Matcher m = p.matcher(string);

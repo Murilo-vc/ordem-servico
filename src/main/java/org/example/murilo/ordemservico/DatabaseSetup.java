@@ -7,8 +7,6 @@ import java.sql.SQLException;
 
 public class DatabaseSetup {
 
-    private static final String DB_URL = "jdbc:sqlite:db/sd.db";
-
     private static void createTables() throws SQLException {
         new UserRepository(Database.connect()).createUserTable();
     }
